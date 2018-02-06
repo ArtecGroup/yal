@@ -20,7 +20,7 @@ namespace artec
 
         struct Entry final
         {
-            Entry(Severity severityLevel, const char* const fileName, size_t lineOfFile) noexcept;
+            Entry(Severity severityLevel, const char* const fileName, int lineOfFile) noexcept;
 
             Entry(const Entry&) = delete;
             Entry& operator=(const Entry&) = delete;
@@ -41,7 +41,7 @@ namespace artec
         class EntryMaker final
         {
         public:
-            EntryMaker(Severity severityLevel, const char* const fileName, size_t lineOfFile);
+            EntryMaker(Severity severityLevel, const char* const fileName, int lineOfFile);
             ~EntryMaker();
 
             EntryMaker(const EntryMaker&) = delete;
